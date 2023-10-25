@@ -60,5 +60,4 @@ spec:
           - backend:
               serviceName: nginx-service
               servicePort: 80
-              path: /
-              pathType: Prefix
+              path: /kd2a4d8394030a(/|$)(.*)
