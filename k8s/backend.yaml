@@ -27,10 +27,9 @@ spec:
             requests:
               memory: 1Gi
           readinessProbe:
-            tcpSocket:
-              port: 3306
-            initialDelaySeconds: 30
-            periodSeconds: 10
+            httpGet:
+			  path: /
+              port: 8080
 ---
 apiVersion: v1
 kind: Service
