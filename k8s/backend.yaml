@@ -28,7 +28,7 @@ spec:
               memory: 1Gi
           readinessProbe:
             tcpSocket:
-          		port: 3306
+          	  port: 3306
         	initialDelaySeconds: 30
         	periodSeconds: 10
 ---
