@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
+  labels:
+    app: backend
 spec:
   selector:
     matchLabels:
@@ -24,7 +26,10 @@ spec:
           resources:
             requests:
               memory: 1Gi
-
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
 ---
 apiVersion: v1
 kind: Service
